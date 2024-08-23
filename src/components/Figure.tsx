@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function Figure({ src, alt }: { src: StaticImport; alt: string }) {
   return (
-    <figure>
+    <figure className="!mt-0">
       <Image src={src} alt={alt} />
       <figcaption className="!mt-0.5 !text-sm">{alt}</figcaption>
     </figure>
