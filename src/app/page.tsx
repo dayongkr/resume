@@ -1,15 +1,12 @@
-import { H1 } from '@/components/typography/H1';
-import { Ul } from '@/components/typography/Ul';
-
 export default function Home() {
   return (
-    <main className="w-full max-w-screen-md">
-      <H1>
+    <main className="prose lg:prose-xl">
+      <h1>
         안녕하세요,
         <br />
-        이다용입니다.
-      </H1>
-      <Ul>
+        프론트엔드 개발자 이다용입니다.
+      </h1>
+      <ul>
         <li>“인류에게 도움이 되는 것을 만들자”가 좌우명이며 “중용과 메타인지”을 중요하다고 믿고 있습니다.</li>
         <li>“성공하려면 도전과 실패가 필요”하다고 믿어 실패 비용이 적은 개발자의 길을 선택했습니다.</li>
         <li>
@@ -21,7 +18,7 @@ export default function Home() {
           앞으로 “프론트엔드 개발 환경을 심도 있게 학습하고 개선”하여 인류에게 도움이 되는 것이 가능한 한 빠르고 많이
           나올 수 있도록 나아갈 것입니다.
         </li>
-      </Ul>
+      </ul>
     </main>
   );
 }
