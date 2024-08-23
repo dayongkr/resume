@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={pretendardSubset.className}>
         <div className="flex items-center justify-center px-8 py-6 md:px-24 md:py-16">{children}</div>
       </body>

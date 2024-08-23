@@ -8,7 +8,7 @@ import { ContactSection } from './_components/ContactSection';
 
 export default function Home() {
   return (
-    <main className="prose dark:prose-invert lg:prose-xl">
+    <main className="prose break-keep dark:prose-invert md:prose-xl">
       <BioSection />
       <ProjectSection />
       <ActivitySection />
