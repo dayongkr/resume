@@ -5,10 +5,9 @@ import { AwardSection } from './_components/AwardSection';
 import { EducationSection } from './_components/EducationSection';
 import { SkillSection } from './_components/SkillSection';
 import { ContactSection } from './_components/ContactSection';
-
 export default function Home() {
   return (
-    <main className="prose break-keep dark:prose-invert md:prose-xl">
+    <main className="container prose prose-lg break-keep dark:prose-invert md:prose-xl">
       <BioSection />
       <ProjectSection />
       <ActivitySection />
