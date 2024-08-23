@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
-const pretendard = localFont({
-  src: '../fonts/PretendardVariable.woff2',
+const pretendardSubset = localFont({
+  src: '../fonts/PretendardVariable.subset.woff2',
   display: 'swap',
+  weight: '75 920',
+  style: 'normal',
 });
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={pretendard.className}>
+      <body className={pretendardSubset.className}>
         <div className="flex items-center justify-center px-8 py-6 md:px-24 md:py-16">{children}</div>
       </body>
     </html>
