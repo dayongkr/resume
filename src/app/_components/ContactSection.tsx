@@ -1,13 +1,22 @@
 import { Section } from '@/components/Section';
+import Link from 'next/link';
 
 export function ContactSection() {
   return (
     <Section>
       <h2>연락처</h2>
       <ul>
-        <li>이메일: dayongkr@gmail.com</li>
-        <li>깃허브: https://github.com/dayongkr</li>
-        <li>링크드인: https://www.linkedin.com/in/dayong-lee-240b53266</li>
+        <li>이메일 - dayongkr@gmail.com</li>
+        <li>
+          <Link href="https://github.com/dayongkr" target="_blank">
+            깃허브
+          </Link>
+        </li>
+        <li>
+          <Link href="https://www.linkedin.com/in/dayong-lee-240b53266" target="_blank">
+            링크드인
+          </Link>
+        </li>
       </ul>
     </Section>
   );
