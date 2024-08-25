@@ -25,28 +25,28 @@ export function ProjectSection() {
         <h4>주요 기여 내용</h4>
         <ul>
           <li>
-            CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 시간을 단축했습니다.
+            CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 시간을 단축했습니다.{' '}
             <SmallLink href="https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+ci&type=pullrequests&s=created&o=desc">
               해당 PRs
             </SmallLink>
           </li>
           <li>
             lodash와 호환이 필요한 함수를 위해 lodash의 소스 코드와 테스트 코드를 기반으로 테스트 코드를 작성하고,
-            호환을 위한 추가 동작을 구현했습니다.
+            호환을 위한 추가 동작을 구현했습니다.{' '}
             <SmallLink href="https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+test+OR+compat&type=pullrequests&s=created&o=desc">
               해당 PRs
             </SmallLink>
           </li>
           <li>
             깃허브 검색 서비스와 노션 차트를 활용하여, 어떤 함수가 많이 사용되는지 등을 분석 및 시각화하고 이를
-            메인테이너에게 공유했습니다.
+            메인테이너에게 공유했습니다.{' '}
             <SmallLink href="https://dayonglee.notion.site/es-toolkit-11f89d50abe84fc89811498cdfae63ab">
               해당 노션 페이지
             </SmallLink>
           </li>
           <ul>
             <li>
-              현재는 해당 작업을 깃 그리고 Node.JS를 활용하여 자동화하고 웹으로 시각화하는 작업을 진행 중에 있습니다.
+              현재는 해당 작업을 깃 그리고 Node.JS를 활용하여 자동화하고 웹으로 시각화하는 작업을 진행 중에 있습니다.{' '}
               <SmallLink href="https://github.com/dayongkr/dependents-tracker">해당 리포지토리</SmallLink>
             </li>
           </ul>

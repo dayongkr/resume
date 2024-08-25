@@ -8,8 +8,8 @@ export function SmallLink({
   children: React.ReactNode;
 }>) {
   return (
-    <span className="text-sm">
-      (<LinkBlank href={href}>{children}</LinkBlank>)
+    <span className="not-prose text-sm underline opacity-80 transition-opacity hover:opacity-100">
+      [<LinkBlank href={href}>{children}</LinkBlank>]
     </span>
   );
 }
