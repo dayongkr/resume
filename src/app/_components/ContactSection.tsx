@@ -1,5 +1,5 @@
 import { MainSection } from '@/components/MainSection';
-import Link from 'next/link';
+import { LinkBlank } from '@/components/LinkBlank';
 
 export function ContactSection() {
   return (
@@ -8,14 +8,10 @@ export function ContactSection() {
       <ul>
         <li>이메일 - dayongkr@gmail.com</li>
         <li>
-          <Link href="https://github.com/dayongkr" target="_blank">
-            깃허브
-          </Link>
+          <LinkBlank href="https://github.com/dayongkr">깃허브</LinkBlank>
         </li>
         <li>
-          <Link href="https://www.linkedin.com/in/dayong-lee-240b53266" target="_blank">
-            링크드인
-          </Link>
+          <LinkBlank href="https://www.linkedin.com/in/dayong-lee-240b53266">링크드인</LinkBlank>
         </li>
       </ul>
     </MainSection>

@@ -1,5 +1,5 @@
 import { cn } from '@/libs/utils';
-import Link from 'next/link';
+import { LinkBlank } from '@/components/LinkBlank';
 
 export function SubSection({
   children,
@@ -26,7 +26,7 @@ Splited.displayName = 'SplitedSection';
 function Title({ title, subTitle, href }: Readonly<{ title: string; subTitle?: string; href?: string }>) {
   return (
     <h3 className="!mt-0">
-      {title} {subTitle && <>({href ? <Link href={href}>{subTitle}</Link> : subTitle})</>}
+      {title} {subTitle && <>({href ? <LinkBlank href={href}>{subTitle}</LinkBlank> : subTitle})</>}
     </h3>
   );
 }
