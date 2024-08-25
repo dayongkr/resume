@@ -6,7 +6,6 @@ import codedang2 from '@/../public/codedang2.webp';
 import codedang3 from '@/../public/codedang3.webp';
 import { StickyWrapper } from '@/components/StickyWrapper';
 import { SubSection } from '@/components/SubSection';
-import { SmallLink } from '@/components/SmallLink';
 
 export function ProjectSection() {
   return (
