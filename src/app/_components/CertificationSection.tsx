@@ -1,8 +1,8 @@
-import { Section } from '@/components/Section';
+import { MainSection } from '@/components/MainSection';
 
 export function CertificationSection() {
   return (
-    <Section>
+    <MainSection>
       <h2>자격증</h2>
       <h3>어학</h3>
       <ul>
@@ -14,6 +14,6 @@ export function CertificationSection() {
         <li>정보처리산업기사 - 2022.09</li>
         <li>네트워크관리사 2급 - 2022.07</li>
       </ul>
-    </Section>
+    </MainSection>
   );
 }

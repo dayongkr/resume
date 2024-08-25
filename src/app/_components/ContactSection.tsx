@@ -1,9 +1,9 @@
-import { Section } from '@/components/Section';
+import { MainSection } from '@/components/MainSection';
 import Link from 'next/link';
 
 export function ContactSection() {
   return (
-    <Section>
+    <MainSection>
       <h2>연락처</h2>
       <ul>
         <li>이메일 - dayongkr@gmail.com</li>
@@ -18,6 +18,6 @@ export function ContactSection() {
           </Link>
         </li>
       </ul>
-    </Section>
+    </MainSection>
   );
 }

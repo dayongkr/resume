@@ -1,8 +1,8 @@
-import { Section } from '@/components/Section';
+import { MainSection } from '@/components/MainSection';
 
 export function AwardSection() {
   return (
-    <Section>
+    <MainSection>
       <h2>수상</h2>
       <h3>SW 중심대학 공동 해커톤 (우수상)</h3>
       <ul>
@@ -24,6 +24,6 @@ export function AwardSection() {
         </li>
         <li>GPT API를 활용하여 개인 브랜딩에 대한 조언을 제공하는 서비스를 개발했습니다.</li>
       </ul>
-    </Section>
+    </MainSection>
   );
 }

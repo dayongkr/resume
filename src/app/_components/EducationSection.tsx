@@ -1,8 +1,8 @@
-import { Section } from '@/components/Section';
+import { MainSection } from '@/components/MainSection';
 
 export function EducationSection() {
   return (
-    <Section>
+    <MainSection>
       <h2>교육</h2>
       <h3>경민대학교 융합소프트웨어과 (4.5/4.5)</h3>
       <h4>창업 후 배움에 대한 열망</h4>
@@ -47,6 +47,6 @@ export function EducationSection() {
         도중에 합격할 수 있었습니다. 이 특강을 통해 문제의 핵심을 파악하고 상황에 맞는 해결책을 제시할 수 있는 역량을
         개발했습니다.
       </p>
-    </Section>
+    </MainSection>
   );
 }

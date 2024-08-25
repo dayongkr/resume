@@ -1,8 +1,8 @@
-import { Section } from '@/components/Section';
+import { MainSection } from '@/components/MainSection';
 
 export function SkillSection() {
   return (
-    <Section>
+    <MainSection>
       <h2>역량</h2>
       <h3>프론트엔드</h3>
       <ul>
@@ -54,6 +54,6 @@ export function SkillSection() {
         <li>GitHub Flow로 브랜치를 관리하고, 커밋 컨벤션을 지키며 협업합니다.</li>
         <li>협업을 위해서는 문서화가 필수라고 생각하며, ChatGPT 등을 활용하여 읽기 쉽게 작성하려 노력합니다.</li>
       </ul>
-    </Section>
+    </MainSection>
   );
 }

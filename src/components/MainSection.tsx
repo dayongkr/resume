@@ -1,4 +1,4 @@
-export function Section({
+export function MainSection({
   children,
 }: Readonly<{
   children: React.ReactNode;

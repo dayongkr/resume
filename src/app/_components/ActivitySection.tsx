@@ -1,8 +1,8 @@
-import { Section } from '@/components/Section';
+import { MainSection } from '@/components/MainSection';
 
 export function ActivitySection() {
   return (
-    <Section>
+    <MainSection>
       <h2>활동</h2>
       <h3>개발 동아리 / 스꾸딩</h3>
       <ul>
@@ -33,6 +33,6 @@ export function ActivitySection() {
           해당 담당자가 책임지고 해결하도록 하는 문화를 만들어 팀의 생산성을 높였습니다.
         </li>
       </ul>
-    </Section>
+    </MainSection>
   );
 }
