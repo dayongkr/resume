@@ -10,11 +10,11 @@ export default function Home() {
     <main className="container prose prose-lg break-keep dark:prose-invert md:prose-xl">
       <BioSection />
       <ProjectSection />
-      <ActivitySection />
+      {/* <ActivitySection />
       <AwardSection />
       <EducationSection />
       <SkillSection />
-      <ContactSection />
+      <ContactSection /> */}
       <blockquote>끝까지 읽어주셔서 감사합니다, 오늘도 좋은 하루 보내세요.</blockquote>
     </main>
   );
