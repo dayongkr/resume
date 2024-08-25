@@ -1,5 +1,6 @@
 import { cn } from '@/libs/utils';
 import { LinkBlank } from '@/components/LinkBlank';
+import { SmallLink } from './SmallLink';
 
 export function SubSection({
   children,
@@ -23,21 +24,11 @@ function Splited({
 
 Splited.displayName = 'SplitedSection';
 
-function Title({ title, subTitle, href }: Readonly<{ title: string; subTitle?: string; href?: string }>) {
-  return (
-    <h3 className="!mt-0">
-      {title} {subTitle && <>({href ? <LinkBlank href={href}>{subTitle}</LinkBlank> : subTitle})</>}
-    </h3>
-  );
-}
-
-Title.displayName = 'Title';
-
-function Item({ children }: Readonly<{ children: React.ReactNode }>) {
+function SplitedItem({ children }: Readonly<{ children: React.ReactNode }>) {
   return <div>{children}</div>;
 }
 
-Item.displayName = 'Item';
+SplitedItem.displayName = 'SplitedItem';
 
 type Date = { year: number; month: number };
 function formatDateString(date: Date | 'current') {
@@ -49,7 +40,7 @@ function SubDescription({
   date,
 }: Readonly<{ children: React.ReactNode; date?: { from: Date; to: Date | 'current' } }>) {
   return (
-    <p className="text-sm md:text-base">
+    <p className="not-prose text-sm opacity-80 md:text-base">
       {date && `${formatDateString(date.from)} ~ ${formatDateString(date.to)}`} / {children}
     </p>
   );
@@ -57,7 +48,40 @@ function SubDescription({
 
 SubDescription.displayName = 'SubDescription';
 
+function Title({ title, subTitle, href }: Readonly<{ title: string; subTitle?: string; href?: string }>) {
+  return (
+    <h3 className="!mt-0">
+      {title} {subTitle && <>({href ? <LinkBlank href={href}>{subTitle}</LinkBlank> : subTitle})</>}
+    </h3>
+  );
+}
+
+Title.displayName = 'Title';
+
+function List({ children, title }: Readonly<{ children: React.ReactNode; title?: string }>) {
+  return (
+    <>
+      {title && <h4>{title}</h4>}
+      <ul>{children}</ul>
+    </>
+  );
+}
+
+List.displayName = 'List';
+
+function ListItem({ children, link }: Readonly<{ children: React.ReactNode; link?: { title: string; href: string } }>) {
+  return (
+    <li>
+      {children} {link && <SmallLink href={link.href}>{link.title}</SmallLink>}
+    </li>
+  );
+}
+
+ListItem.displayName = 'ListItem';
+
 SubSection.Splited = Splited;
-Splited.Item = Item;
+SubSection.SplitedItem = SplitedItem;
 SubSection.SubDescription = SubDescription;
 SubSection.Title = Title;
+SubSection.List = List;
+SubSection.ListItem = ListItem;

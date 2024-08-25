@@ -6,7 +6,7 @@ export function LinkBlank({
   href: string;
 }>) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="underline">
       {children}
     </a>
   );
