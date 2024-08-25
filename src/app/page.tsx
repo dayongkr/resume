@@ -15,7 +15,9 @@ export default function Home() {
       <EducationSection />
       <SkillSection />
       <ContactSection /> */}
-      <blockquote>끝까지 읽어주셔서 감사합니다, 오늘도 좋은 하루 보내세요.</blockquote>
+      <blockquote className="text-base">
+        더 궁금하신 부분이 있으시다면, 상단 연락처로 연락주시면 감사하겠습니다.
+      </blockquote>
     </main>
   );
 }
