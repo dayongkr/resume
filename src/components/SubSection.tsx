@@ -63,7 +63,7 @@ function List({
             <ListItem key={index} link={item.link}>
               {item.text}
             </ListItem>
-            {item.sub && <List key={index} items={item.sub} />}
+            {item.sub && <List key={index + 'sub'} items={item.sub} />}
           </>
         ))}
       </ul>
