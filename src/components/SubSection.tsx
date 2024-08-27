@@ -60,7 +60,9 @@ function List({
       <ul>
         {items.map((item, index) => (
           <>
-            <ListItem key={index}>{item.text}</ListItem>
+            <ListItem key={index} link={item.link}>
+              {item.text}
+            </ListItem>
             {item.sub && <List key={index} items={item.sub} />}
           </>
         ))}
