@@ -45,18 +45,33 @@ function Title({ title, subTitle, href }: Readonly<{ title: string; subTitle?: s
 
 Title.displayName = 'Title';
 
-function List({ children, title }: Readonly<{ children: React.ReactNode; title?: string }>) {
+type Link = { title: string; href: string };
+type Item = { text: string; link?: Link; sub?: Item[] };
+function List({
+  items,
+  title,
+}: Readonly<{
+  items: Item[];
+  title?: string;
+}>) {
   return (
     <>
       {title && <h4>{title}</h4>}
-      <ul>{children}</ul>
+      <ul>
+        {items.map((item, index) => (
+          <>
+            <ListItem key={index}>{item.text}</ListItem>
+            {item.sub && <List key={index} items={item.sub} />}
+          </>
+        ))}
+      </ul>
     </>
   );
 }
 
 List.displayName = 'List';
 
-function ListItem({ children, link }: Readonly<{ children: React.ReactNode; link?: { title: string; href: string } }>) {
+function ListItem({ children, link }: Readonly<{ children: React.ReactNode; link?: Link }>) {
   return (
     <li>
       {children}{' '}
