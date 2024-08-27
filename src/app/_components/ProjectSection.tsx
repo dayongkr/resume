@@ -4,7 +4,6 @@ import { LinkBlank } from '@/components/LinkBlank';
 import codedang1 from '@/../public/codedang1.webp';
 import codedang2 from '@/../public/codedang2.webp';
 import codedang3 from '@/../public/codedang3.webp';
-import { StickyWrapper } from '@/components/StickyWrapper';
 import { SubSection } from '@/components/SubSection';
 
 export function ProjectSection() {
@@ -14,7 +13,9 @@ export function ProjectSection() {
       <SubSection>
         <SubSection.Title title="오픈 소스 기여" subTitle="toss/es-toolkit" href="https://github.com/toss/es-toolkit" />
         <SubSection.SubDescription date={{ from: { year: 24, month: 7 }, to: 'current' }}>
-          <LinkBlank href="https://github.com/toss/es-toolkit/commits?author=dayongkr">기여 이력</LinkBlank>
+          <LinkBlank href="https://github.com/toss/es-toolkit/commits?author=dayongkr" small>
+            기여 이력
+          </LinkBlank>
         </SubSection.SubDescription>
         <p>
           es-toolkit는 lodash의 느린 성능과 무거운 번들 사이즈를 개선한 자바스크립트 유틸리티 라이브러리입니다. 한국
@@ -62,11 +63,13 @@ export function ProjectSection() {
           보람이었습니다.
         </p>
       </SubSection>
-      <SubSection.Splited>
-        <SubSection.SplitedItem>
+      <SubSection split>
+        <div className="col-span-2">
           <SubSection.Title title="성균관대학교 코딩플랫폼" subTitle="코드당" href="https://codedang.com" />
           <SubSection.SubDescription date={{ from: { year: 23, month: 3 }, to: 'current' }}>
-            <LinkBlank href="https://github.com/skkuding/codedang">깃허브 리포지토리</LinkBlank>
+            <LinkBlank href="https://github.com/skkuding/codedang" small>
+              깃허브 리포지토리
+            </LinkBlank>
           </SubSection.SubDescription>
           <p>
             코드당은 성균관대학교 학부생들이 별도의 개발 환경 설치 없이 수업 시간에 프로그래밍 문제를 풀고, 알고리즘
@@ -82,15 +85,15 @@ export function ProjectSection() {
               개발하는 사람이 자주 바뀐다는 동아리 상황에 맞추어, 폴더 구조 개선을 주도했습니다.
             </SubSection.ListItem>
           </SubSection.List>
-        </SubSection.SplitedItem>
-        <SubSection.SplitedItem>
-          <StickyWrapper>
+        </div>
+        <div>
+          <div className="stickyWrapper">
             <Figure src={codedang1} alt="코드당 메인 화면" />
             <Figure src={codedang2} alt="코드당 문제 풀이 화면" />
             <Figure src={codedang3} alt="코드당 어드민 화면" />
-          </StickyWrapper>
-        </SubSection.SplitedItem>
-      </SubSection.Splited>
+          </div>
+        </div>
+      </SubSection>
     </MainSection>
   );
 }

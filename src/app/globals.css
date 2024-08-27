@@ -67,3 +67,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .stickyWrapper {
+    @apply sticky top-8 overflow-y-auto;
+  }
+
+  .smallLink {
+    @apply text-sm opacity-80 transition-opacity hover:opacity-100;
+  }
+
+  .mark {
+    @apply rounded-md bg-primary px-2 text-primary-foreground;
+  }
+}

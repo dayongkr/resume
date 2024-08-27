@@ -1,5 +1,4 @@
 import { MainSection } from '@/components/MainSection';
-import { Marking } from '@/components/Marking';
 
 export function BioSection() {
   return (
@@ -7,7 +6,7 @@ export function BioSection() {
       <h1 className="mb-6 !leading-tight md:mb-14">
         안녕하세요,
         <br />
-        프론트엔드 개발자 <Marking>이다용</Marking>
+        프론트엔드 개발자 <span className="mark">이다용</span>
         입니다.
       </h1>
       <p className="text-xl !leading-relaxed md:text-2xl">

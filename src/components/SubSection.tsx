@@ -1,34 +1,21 @@
 import { cn } from '@/libs/utils';
 import { LinkBlank } from '@/components/LinkBlank';
-import { SmallLink } from './SmallLink';
 
 export function SubSection({
   children,
   className,
+  split,
 }: Readonly<{
   children: React.ReactNode;
   className?: string;
+  split?: boolean;
 }>) {
-  return <section className={cn('mb-16 md:mb-32', className)}>{children}</section>;
+  return (
+    <section className={cn('mb-16 md:mb-32', split && 'grid gap-8 md:grid-cols-3', className)}>{children}</section>
+  );
 }
 
 SubSection.displayName = 'SubSection';
-
-function Splited({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return <SubSection className="grid gap-8 md:grid-cols-2">{children}</SubSection>;
-}
-
-Splited.displayName = 'SplitedSection';
-
-function SplitedItem({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <div>{children}</div>;
-}
-
-SplitedItem.displayName = 'SplitedItem';
 
 type Date = { year: number; month: number };
 function formatDateString(date: Date | 'current') {
@@ -72,15 +59,18 @@ List.displayName = 'List';
 function ListItem({ children, link }: Readonly<{ children: React.ReactNode; link?: { title: string; href: string } }>) {
   return (
     <li>
-      {children} {link && <SmallLink href={link.href}>{link.title}</SmallLink>}
+      {children}{' '}
+      {link && (
+        <LinkBlank href={link.href} className="not-prose" small>
+          {link.title}
+        </LinkBlank>
+      )}
     </li>
   );
 }
 
 ListItem.displayName = 'ListItem';
 
-SubSection.Splited = Splited;
-SubSection.SplitedItem = SplitedItem;
 SubSection.SubDescription = SubDescription;
 SubSection.Title = Title;
 SubSection.List = List;
