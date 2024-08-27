@@ -26,28 +26,35 @@ export function ProjectSection() {
           title="주요 기여 내용"
           items={[
             {
-              text: 'CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 시간을 단축했습니다.',
+              text: '객체를 복제하는 함수가 프로토타입도 복제하도록 수정하거나, 정수인지 확인할 때 네이티브 함수를 사용하도록 하는 등의 수정으로 안정성을 높였습니다.',
               link: {
                 title: '해당 PRs',
-                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+ci&type=pullrequests&s=created&o=desc',
+                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+++NOT+compatibility+NOT+%22number+case%22++NOT+compat+AND+feat+OR+modernize&type=pullrequests&s=created&o=desc',
               },
             },
             {
               text: 'lodash와 호환이 필요한 함수를 위해 lodash의 소스 코드와 테스트 코드를 기반으로 테스트 코드를 작성하고 호환을 위한 추가 동작을 구현했습니다.',
               link: {
                 title: '해당 PRs',
-                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+test+OR+compat&type=pullrequests&s=created&o=desc',
+                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+test+OR+compat+OR+compatibility&type=pullrequests&s=created&o=desc',
               },
             },
             {
-              text: '깃허브 검색 서비스와 노션 차트를 활용하여, 어떤 함수가 많이 사용되는지 등을 분석 및 시각화하고 이를 메인테이너에게 공유했습니다.',
+              text: 'CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 실행 시간을 단축했습니다.',
+              link: {
+                title: '해당 PRs',
+                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+ci&type=pullrequests&s=created&o=desc',
+              },
+            },
+            {
+              text: '깃허브 검색 서비스와 노션 차트를 활용하여, 어떤 함수가 많이 사용되는지 등을 분석 및 시각화하고 이를 메인테이너분에게 공유했습니다.',
               link: {
                 title: '해당 노션 페이지',
                 href: 'https://dayonglee.notion.site/es-toolkit-11f89d50abe84fc89811498cdfae63ab',
               },
               sub: [
                 {
-                  text: '현재는 해당 작업을 깃 그리고 Node.JS를 활용하여 자동화하고 웹으로 시각화하는 작업을 진행 중에 있습니다.',
+                  text: '현재는 해당 작업을 깃 그리고 Node.JS를 활용하여 데이터 수집을 자동화하고 웹으로 시각화하는 작업을 진행 중에 있습니다.',
                   link: { title: '해당 리포지토리', href: 'https://github.com/dayongkr/dependents-tracker' },
                 },
               ],
