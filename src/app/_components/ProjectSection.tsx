@@ -67,7 +67,7 @@ export function ProjectSection() {
         </p>
       </SubSection>
       <SubSection split>
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <SubSection.Title title="성균관대학교 코딩플랫폼" subTitle="코드당" href="https://codedang.com" />
           <SubSection.SubDescription
             date={{ from: { year: 23, month: 3 }, to: 'current' }}
