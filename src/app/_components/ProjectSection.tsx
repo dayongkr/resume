@@ -12,11 +12,10 @@ export function ProjectSection() {
       <MainSection.Title title="프로젝트" />
       <SubSection>
         <SubSection.Title title="오픈 소스 기여" subTitle="toss/es-toolkit" href="https://github.com/toss/es-toolkit" />
-        <SubSection.SubDescription date={{ from: { year: 24, month: 7 }, to: 'current' }}>
-          <LinkBlank href="https://github.com/toss/es-toolkit/commits?author=dayongkr" small>
-            기여 이력
-          </LinkBlank>
-        </SubSection.SubDescription>
+        <SubSection.SubDescription
+          date={{ from: { year: 24, month: 7 }, to: 'current' }}
+          link={{ title: '기여 이력', href: 'https://github.com/toss/es-toolkit/commits?author=dayongkr' }}
+        />
         <p>
           es-toolkit는 lodash의 느린 성능과 무거운 번들 사이즈를 개선한 자바스크립트 유틸리티 라이브러리입니다. 한국
           오픈 소스 문화에 기여 그리고 ECMAScript와 타입스크립트를 활용할 수 있는 기회라고 생각하여 시작했으며, 2024년
@@ -70,11 +69,10 @@ export function ProjectSection() {
       <SubSection split>
         <div className="col-span-2">
           <SubSection.Title title="성균관대학교 코딩플랫폼" subTitle="코드당" href="https://codedang.com" />
-          <SubSection.SubDescription date={{ from: { year: 23, month: 3 }, to: 'current' }}>
-            <LinkBlank href="https://github.com/skkuding/codedang" small>
-              깃허브 리포지토리
-            </LinkBlank>
-          </SubSection.SubDescription>
+          <SubSection.SubDescription
+            date={{ from: { year: 23, month: 3 }, to: 'current' }}
+            link={{ title: '깃허브 리포지토리', href: 'https://github.com/skkuding/codedang' }}
+          />
           <p>
             코드당은 성균관대학교 학부생들이 별도의 개발 환경 설치 없이 수업 시간에 프로그래밍 문제를 풀고, 알고리즘
             경진 대회를 개최할 수 있는 등 학우들의 프로그래밍 역량을 향상하기 위한 교내 코딩 플랫폼 서비스입니다.

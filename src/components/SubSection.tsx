@@ -23,13 +23,18 @@ function formatDateString(date: Date | 'current') {
   return date === 'current' ? '현재' : `${String(date.year).padStart(4, '20')}.${String(date.month).padStart(2, '0')}`;
 }
 
-function SubDescription({
-  children,
-  date,
-}: Readonly<{ children: React.ReactNode; date?: { from: Date; to: Date | 'current' } }>) {
+function SubDescription({ date, link }: Readonly<{ date?: { from: Date; to: Date | 'current' }; link?: Link }>) {
   return (
     <p className="not-prose text-sm opacity-80 md:text-base">
-      {date && `${formatDateString(date.from)} ~ ${formatDateString(date.to)}`} / {children}
+      {date && `${formatDateString(date.from)} ~ ${formatDateString(date.to)}`}
+      {link && (
+        <>
+          {' / '}
+          <LinkBlank href={link.href} small>
+            {link.title}
+          </LinkBlank>
+        </>
+      )}
     </p>
   );
 }
