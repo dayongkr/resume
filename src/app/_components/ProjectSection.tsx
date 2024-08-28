@@ -1,10 +1,10 @@
 import { Figure } from '@/components/Figure';
-import { MainSection } from '@/components/MainSection';
 import { LinkBlank } from '@/components/LinkBlank';
-import codedang1 from '@/../public/codedang1.webp';
-import codedang2 from '@/../public/codedang2.webp';
-import codedang3 from '@/../public/codedang3.webp';
+import { MainSection } from '@/components/MainSection';
 import { SubSection } from '@/components/SubSection';
+import codedang1 from '@public/codedang1.webp';
+import codedang2 from '@public/codedang2.webp';
+import codedang3 from '@public/codedang3.webp';
 
 export function ProjectSection() {
   return (

@@ -1,5 +1,5 @@
-import { MainSection } from '@/components/MainSection';
 import { LinkBlank } from '@/components/LinkBlank';
+import { MainSection } from '@/components/MainSection';
 
 export function ContactSection() {
   return (

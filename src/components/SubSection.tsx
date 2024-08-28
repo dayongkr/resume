@@ -1,5 +1,5 @@
-import { cn } from '@/libs/utils';
 import { LinkBlank } from '@/components/LinkBlank';
+import { cn } from '@/libs/utils';
 
 export function SubSection({
   children,
