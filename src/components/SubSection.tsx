@@ -1,5 +1,7 @@
 import { LinkBlank } from '@/components/LinkBlank';
 import { cn } from '@/libs/utils';
+import { it } from 'node:test';
+import React from 'react';
 
 export function SubSection({
   children,
@@ -59,12 +61,10 @@ function List({
       {title && <h4>{title}</h4>}
       <ul>
         {items.map((item, index) => (
-          <>
-            <ListItem key={index} link={item.link}>
-              {item.text}
-            </ListItem>
-            {item.sub && <List key={index + 'sub'} items={item.sub} />}
-          </>
+          <React.Fragment key={index}>
+            <ListItem link={item.link}>{item.text}</ListItem>
+            {item.sub && <List items={item.sub} />}
+          </React.Fragment>
         ))}
       </ul>
     </>
