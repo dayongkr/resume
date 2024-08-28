@@ -1,5 +1,8 @@
 pre-commit:
   parallel: true
   commands:
-    - run: pnpm eslint {staged_files}
-    - run: pnpm prettier --c {staged_files}
+    eslint:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: pnpm eslint {staged_files}
+    prettier:
+      run: pnpm prettier --c {staged_files}
