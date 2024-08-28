@@ -2,3 +2,4 @@ out
 node_modules
 .git
 .next
+pnpm-lock.yaml
