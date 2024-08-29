@@ -70,7 +70,7 @@
 
 @layer components {
   .stickyWrapper {
-    @apply sticky top-8 overflow-y-auto;
+    @apply sticky top-8 h-fit;
   }
 
   .smallLink {
