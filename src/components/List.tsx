@@ -1,8 +1,8 @@
 import { Link } from '../types/props';
 import { LinkBlank } from './LinkBlank';
-import React from 'react';
+import { Fragment } from 'react';
 
-type ListItem = { text: string; link?: Link; sub?: ListItem[] };
+type ListItem = { children: React.ReactNode; link?: Link; sub?: ListItem[] };
 
 export function List({
   items,
@@ -16,10 +16,10 @@ export function List({
       {title && <h4>{title}</h4>}
       <ul>
         {items.map((item, index) => (
-          <React.Fragment key={index}>
-            <ListItem link={item.link}>{item.text}</ListItem>
+          <Fragment key={index}>
+            <ListItem link={item.link}>{item.children}</ListItem>
             {item.sub && <List items={item.sub} />}
-          </React.Fragment>
+          </Fragment>
         ))}
       </ul>
     </>
