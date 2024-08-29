@@ -1,21 +1,14 @@
 export function MainSection({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return <section className="border-b">{children}</section>;
-}
-
-MainSection.displayName = 'MainSection';
-
-function Title({
   title,
 }: Readonly<{
-  title: string;
+  children: React.ReactNode;
+  title?: string;
 }>) {
-  return <h2 className="border-l-4 border-primary pl-2">{title}</h2>;
+  return (
+    <section className="border-b">
+      {title && <h2 className="border-l-4 border-primary pl-2">{title}</h2>}
+      {children}
+    </section>
+  );
 }
-
-Title.displayName = 'Title';
-
-MainSection.Title = Title;

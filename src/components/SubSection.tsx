@@ -2,97 +2,36 @@ import { LinkBlank } from '@/components/LinkBlank';
 import { cn } from '@/libs/utils';
 import React from 'react';
 
+type Title = { text: string; sub?: { text: string; href: string } };
+
 export function SubSection({
   children,
+  title,
   className,
-  split,
+  grid,
 }: Readonly<{
   children: React.ReactNode;
+  title?: Title;
   className?: string;
-  split?: boolean;
+  grid?: boolean;
 }>) {
   return (
-    <section className={cn('mb-16 md:mb-32', split && 'grid gap-8 md:grid-cols-3', className)}>{children}</section>
+    <section className={cn('mb-16 md:mb-32', grid && 'grid gap-8 md:grid-cols-3', className)}>
+      {title && <SubSectionTitle title={title} />}
+      {children}
+    </section>
   );
 }
 
-SubSection.displayName = 'SubSection';
-
-type Date = { year: number; month: number };
-function formatDateString(date: Date | 'current') {
-  return date === 'current' ? '현재' : `${String(date.year).padStart(4, '20')}.${String(date.month).padStart(2, '0')}`;
-}
-
-function SubDescription({ date, link }: Readonly<{ date?: { from: Date; to: Date | 'current' }; link?: Link }>) {
-  return (
-    <p className="not-prose text-sm opacity-80 md:text-base">
-      {date && `${formatDateString(date.from)} ~ ${formatDateString(date.to)}`}
-      {link && (
-        <>
-          {' / '}
-          <LinkBlank href={link.href} small>
-            {link.title}
-          </LinkBlank>
-        </>
-      )}
-    </p>
-  );
-}
-
-SubDescription.displayName = 'SubDescription';
-
-function Title({ title, subTitle, href }: Readonly<{ title: string; subTitle?: string; href?: string }>) {
+export function SubSectionTitle({
+  title,
+}: Readonly<{
+  title: Title;
+}>) {
+  const { text, sub } = title;
   return (
     <h3 className="!mt-0">
-      {title} {subTitle && <>({href ? <LinkBlank href={href}>{subTitle}</LinkBlank> : subTitle})</>}
+      {text} {sub && sub.href ? <LinkBlank href={sub.href}>{sub.text}</LinkBlank> : <>sub.text</>}
     </h3>
   );
 }
-
-Title.displayName = 'Title';
-
-type Link = { title: string; href: string };
-type Item = { text: string; link?: Link; sub?: Item[] };
-function List({
-  items,
-  title,
-}: Readonly<{
-  items: Item[];
-  title?: string;
-}>) {
-  return (
-    <>
-      {title && <h4>{title}</h4>}
-      <ul>
-        {items.map((item, index) => (
-          <React.Fragment key={index}>
-            <ListItem link={item.link}>{item.text}</ListItem>
-            {item.sub && <List items={item.sub} />}
-          </React.Fragment>
-        ))}
-      </ul>
-    </>
-  );
-}
-
-List.displayName = 'List';
-
-function ListItem({ children, link }: Readonly<{ children: React.ReactNode; link?: Link }>) {
-  return (
-    <li>
-      {children}{' '}
-      {link && (
-        <LinkBlank href={link.href} className="not-prose" small>
-          {link.title}
-        </LinkBlank>
-      )}
-    </li>
-  );
-}
-
-ListItem.displayName = 'ListItem';
-
-SubSection.SubDescription = SubDescription;
-SubSection.Title = Title;
-SubSection.List = List;
-SubSection.ListItem = ListItem;
