@@ -1,7 +1,7 @@
+import { Link } from '../../types/props';
 import { LinkBlank } from './LinkBlank';
 import React from 'react';
 
-type Link = { title: string; href: string };
 type ListItem = { text: string; link?: Link; sub?: ListItem[] };
 
 export function List({

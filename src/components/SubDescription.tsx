@@ -1,3 +1,4 @@
+import { Link } from '../../types/props';
 import { LinkBlank } from './LinkBlank';
 
 type Date = { year: number; month: number };
