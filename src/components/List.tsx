@@ -1,4 +1,4 @@
-import { Link } from '../../types/props';
+import { Link } from '../types/props';
 import { LinkBlank } from './LinkBlank';
 import React from 'react';
 
