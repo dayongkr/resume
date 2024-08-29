@@ -1,8 +1,7 @@
 import { LinkBlank } from '@/components/LinkBlank';
 import { cn } from '@/libs/utils';
-import React from 'react';
 
-type Title = { text: string; sub?: { text: string; href: string } };
+type Title = { text: string; sub?: { text: string; href?: string } };
 
 export function SubSection({
   children,
@@ -16,7 +15,7 @@ export function SubSection({
   grid?: boolean;
 }>) {
   return (
-    <section className={cn('mb-16 md:mb-32', grid && 'grid gap-8 md:grid-cols-3', className)}>
+    <section className={cn('mb-16 md:mb-24', grid && 'grid gap-8 md:grid-cols-3', className)}>
       {title && <SubSectionTitle title={title} />}
       {children}
     </section>
@@ -30,8 +29,8 @@ export function SubSectionTitle({
 }>) {
   const { text, sub } = title;
   return (
-    <h3 className="!mt-0">
-      {text} {sub && sub.href ? <LinkBlank href={sub.href}>{sub.text}</LinkBlank> : <>sub.text</>}
+    <h3 className="!mt-0 !mb-1">
+      {text} {sub && <>({sub.href ? <LinkBlank href={sub.href}>{sub.text}</LinkBlank> : sub.text})</>}
     </h3>
   );
 }
