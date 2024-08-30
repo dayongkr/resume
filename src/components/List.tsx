@@ -17,8 +17,9 @@ export function List({
       <ul>
         {items.map((item, index) => (
           <Fragment key={index}>
-            <ListItem link={item.link}>{item.children}</ListItem>
-            {item.sub && <List items={item.sub} />}
+            <ListItem link={item.link} sub={item?.sub}>
+              {item.children}
+            </ListItem>
           </Fragment>
         ))}
       </ul>
@@ -26,7 +27,11 @@ export function List({
   );
 }
 
-export function ListItem({ children, link }: Readonly<{ children: React.ReactNode; link?: Link }>) {
+export function ListItem({
+  children,
+  link,
+  sub,
+}: Readonly<{ children: React.ReactNode; link?: Link; sub?: ListItem[] }>) {
   return (
     <li>
       {children}{' '}
@@ -35,6 +40,7 @@ export function ListItem({ children, link }: Readonly<{ children: React.ReactNod
           {link.title}
         </LinkBlank>
       )}
+      {sub && <List items={sub} />}
     </li>
   );
 }
