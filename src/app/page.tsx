@@ -3,11 +3,13 @@ import { AwardSection } from './_components/AwardSection';
 import { BioSection } from './_components/BioSection';
 import { CertificationSection } from './_components/CertificationSection';
 import { ContactSection } from './_components/ContactSection';
+import { PrintBanner } from './_components/PrintBanner';
 import { ProjectSection } from './_components/ProjectSection';
 
 export default function Home() {
   return (
     <main className="container prose prose-lg break-keep dark:prose-invert md:prose-xl">
+      <PrintBanner />
       <BioSection />
       <ProjectSection />
       <AwardSection />
