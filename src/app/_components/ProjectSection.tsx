@@ -74,7 +74,20 @@ export function ProjectSection() {
             },
           ]}
         />
-        {/* TODO: 기여 후기 작성 */}
+        <p>
+          위 기여를 통해 범용성이 높은 Lodash 코드를 분석하면서, 자주 사용되지 않는 케이스로 인해 성능 저하와 코드
+          복잡성이 높아지는 문제를 확인했습니다. 이러한 경험에서 오버 엔지니어링을 경계하고, 사용자 중심의 개발을 통해
+          유용한 기능을 제공하는 것이 중요하다는 것을 배웠습니다.
+        </p>
+        <List
+          title="사용한 기술"
+          items={[
+            { children: '코어: Typescript' },
+            { children: '패키지 매니저: Yarn Berry' },
+            { children: '테스트: Vitest' },
+            { children: 'CI/CD: Github Actions, CircleCI' },
+          ]}
+        />
       </SubSection>
       <SubSection grid>
         <div className="md:col-span-2">
@@ -101,19 +114,65 @@ export function ProjectSection() {
               {
                 children:
                   'SSR 서버와 분리된 백엔드 서버에서 발급한 JWT를 SSR 서버와 사용자가 공유할 수 있도록 구현했으며, Vitest와 MSW를 사용해 테스트 코드를 작성하여 안정성을 높였습니다.',
+                link: {
+                  title: '해당 PRs',
+                  href: 'https://github.com/search?q=repo:skkuding/codedang+author:dayongkr+type:pr++state:closed+in:title+authentication&type=pullrequests&s=created&o=desc',
+                },
               },
               {
                 children:
-                  '사용자 세션을 가져오는 함수를 클라이언트와 서버 구분 없이 사용할 수 있도록 추상화하고, 클로저를 활용해 클라이언트 측에서는 캐싱되도록 구현했습니다.',
+                  '사용자 세션을 클라이언트와 서버 구분 없이 가져올 수 있도록 함수를 추상화하고, 클로저를 활용해 클라이언트 측에서 캐싱되도록 구현하여 개발자 경험을 향상시키고 서버 부하를 줄였습니다.',
+                link: {
+                  title: '해당 PR',
+                  href: 'https://github.com/skkuding/codedang/pull/1973',
+                },
               },
               {
                 children:
-                  '이미지 부분을 최소화한 캐러셀 컴포넌트를 개발하고, 이미지 압축을 지원하는 Next.js의 이미지 컴포넌트를 올바르게 사용하도록 가이드하여 로딩 속도를 개선했습니다.',
+                  '이미지 부분을 최소화한 캐러셀 컴포넌트를 개발하고, 이미지 최적화 기능의 동작 원리를 파악하기 위해 Next.js의 소스 코드를 분석한 후 관련 정보를 공유하여 로딩 속도를 개선했습니다.',
+                link: {
+                  title: '정리한 글',
+                  href: 'https://velog.io/@dayongkr/Next.JS%EC%9D%98-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0-%EB%B6%80%EC%A0%9C.-AVIF-%EB%A7%8C%EB%8A%A5%EC%9D%80-%EC%95%84%EB%8B%88%EB%8B%A4',
+                },
               },
               {
                 children:
-                  '특정 페이지의 First Load JS 용량이 유난히 큰 것을 파악한 후, Webpack Analyzer로 이를 분석하여 트리 쉐이킹이 되지 않는 부분을 수정함으로써 용량을 1.1MB에서 0.67MB로 줄였습니다.',
+                  '특정 페이지의 First Load JS 용량이 유난히 큰 것을 파악하고, Webpack Analyzer로 분석한 후 트리 쉐이킹이 되지 않는 부분을 수정하여 용량을 1.1MB에서 0.67MB로 줄였습니다.',
+                link: {
+                  title: '해당 PR',
+                  href: 'https://github.com/skkuding/codedang/pull/1525',
+                },
               },
+              {
+                children:
+                  'Vue.js에서 Next.js로 프레임워크를 전환하는 작업을 주도하며, 폴더 구조를 설계하고 학습하기 쉬운 기술 스택을 선택하여 두 달 안에 전환 작업을 완료했습니다.',
+              },
+              {
+                children:
+                  '선급한 개발으로 발생한 코드 중복을 줄이고, 통일성 없는 폴더 구조를 개선하기 위해 팀 토론을 주도하며, 응집도 높은 폴더 구조를 가지도록 개선안을 제안했습니다.',
+                link: {
+                  title: '토론 기록',
+                  href: 'https://www.notion.so/dayonglee/1-aa05976d60e84cdc87b423337d0b2a0c?pvs=4',
+                },
+              },
+            ]}
+          />
+          <p>
+            28명의 동아리 부원들과 함께 사용자가 있는 하나의 프로젝트를 1년 반 동안 개발하면서, 배경 지식이 다른 팀들과
+            소통하는 역량을 키울 수 있었습니다. 다만, 프레임워크 전환 과정에서 마감에 쫓겨 코드 리뷰를 제대로 하지 못한
+            점이 아쉬웠고 코드 리뷰를 통해 팀원 간 의견을 공유하는 것이 중요하다는 것을 배웠습니다.
+          </p>
+          <List
+            title="사용한 기술"
+            items={[
+              { children: '코어: Next.JS, Typescript' },
+              {
+                children: '상태 관리: Zustand',
+              },
+              { children: '스타일링: TailwindCSS' },
+              { children: '패키지 매니저: PNPM' },
+              { children: '테스트: Vitest, MSW' },
+              { children: 'CI/CD: Github Actions' },
             ]}
           />
         </div>
