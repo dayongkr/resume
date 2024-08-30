@@ -8,7 +8,7 @@ import { ProjectSection } from './_components/ProjectSection';
 
 export default function Home() {
   return (
-    <main className="container prose prose-lg break-keep dark:prose-invert md:prose-xl">
+    <main className="container prose prose-lg break-keep dark:prose-invert !max-w-3xl">
       <PrintBanner />
       <BioSection />
       <ProjectSection />
