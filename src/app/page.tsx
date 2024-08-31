@@ -3,6 +3,7 @@ import { AwardSection } from './_components/AwardSection';
 import { BioSection } from './_components/BioSection';
 import { CertificationSection } from './_components/CertificationSection';
 import { ContactSection } from './_components/ContactSection';
+import { EducationSection } from './_components/EducationSection';
 import { PrintBanner } from './_components/PrintBanner';
 import { ProjectSection } from './_components/ProjectSection';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <BioSection />
       <ProjectSection />
       <ActivitySection />
+      <EducationSection />
       <AwardSection />
       <CertificationSection />
       <ContactSection />
