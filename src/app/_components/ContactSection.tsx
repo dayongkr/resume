@@ -10,7 +10,7 @@ export function ContactSection() {
         <List
           items={[
             {
-              children: '이메일 - dayongkr@gmail.com',
+              children: <LinkBlank href="mailto:dayongkr@gmail.com">dayongkr@gmail.com</LinkBlank>,
             },
             {
               children: <LinkBlank href="https://github.com/dayongkr">깃허브</LinkBlank>,
