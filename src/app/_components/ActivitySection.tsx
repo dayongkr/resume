@@ -28,15 +28,28 @@ export function ActivitySection() {
           ]}
         />
       </SubSection>
+      <SubSection title={{ text: '삼성전자 DX 대학생 알고리즘 역량 강화 특강 수료' }}>
+        <SubDescription date={{ from: { year: 2024, month: 1 }, to: { year: 2024, month: 2 } }} />
+        <List
+          items={[
+            {
+              children:
+                '약 1,000명의 지원자 중 200명 정도가 선발되어 트라이, 부분합, 해싱 등 다양한 알고리즘에 대한 이론과 실습을 진행하였습니다',
+            },
+            {
+              children: '특강 중간에 진행된 SW 역량 테스트 B형에 C++로 응시하여 합격하였습니다.',
+            },
+          ]}
+        />
+      </SubSection>
       <SubSection title={{ text: '교내 개발 동아리', sub: { text: '스꾸딩' } }}>
-        <SubDescription date={{ from: { year: 2024, month: 8 }, to: 'current' }} />
+        <SubDescription date={{ from: { year: 2023, month: 3 }, to: { year: 2024, month: 8 } }} />
         <List
           items={[
             {
               children:
                 '교내 개발 동아리 중 기술적으로 가장 활발한 성균관대학교 코딩 플랫폼 개발 동아리에서 프론트엔드 팀장과 멘토로 활동했습니다.',
             },
-
             {
               children:
                 '배포 지연과 동기 부여 부족으로 기존 부원들이 이탈하는 상황에서도 열심히 활동하여, 현재는 베타 테스트를 성공적으로 마쳤으며, 활동 인원도 약 10명에서 28명으로 성장하는 과정을 함께 했습니다.',
