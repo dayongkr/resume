@@ -12,8 +12,8 @@ export default function Home() {
       <PrintBanner />
       <BioSection />
       <ProjectSection />
-      <AwardSection />
       <ActivitySection />
+      <AwardSection />
       <CertificationSection />
       <ContactSection />
       <blockquote className="text-base">
