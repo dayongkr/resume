@@ -6,6 +6,7 @@ import { ContactSection } from './_components/ContactSection';
 import { EducationSection } from './_components/EducationSection';
 import { PrintBanner } from './_components/PrintBanner';
 import { ProjectSection } from './_components/ProjectSection';
+import { SkillSection } from './_components/SkillSection';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ActivitySection />
       <EducationSection />
       <AwardSection />
+      <SkillSection />
       <CertificationSection />
       <ContactSection />
     </main>
