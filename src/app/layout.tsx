@@ -10,8 +10,15 @@ const pretendardSubset = localFont({
 });
 
 export const metadata: Metadata = {
-  title: '이력서 - 이다용 (Dayong Lee)',
+  title: '이다용 - 이력서',
   description: '안녕하세요, 프론트엔드 개발자 이다용입니다.',
+  category: 'resume',
+  metadataBase: new URL('https://dayongkr.github.io'),
+  openGraph: {
+    description: '이력서를 공유해주셔서 감사합니다.',
+    locale: 'ko_KR',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="ko" className="scroll-smooth">
       <body className={pretendardSubset.className}>
         <div className="px-6 py-6 md:px-8 md:py-16">{children}</div>
       </body>
