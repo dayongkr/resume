@@ -113,7 +113,7 @@ export function ProjectSection() {
             items={[
               {
                 children:
-                  'SSR 서버와 분리된 백엔드 서버에서 발급한 JWT를 SSR 서버와 사용자가 공유할 수 있도록 구현했으며, Vitest와 MSW를 사용해 테스트 코드를 작성하여 안정성을 높였습니다.',
+                  'SSR 서버와 분리된 백엔드 서버에서 발급한 JWT를 SSR 서버와 사용자가 공유할 수 있도록 사용자 인증 부분을 구현했으며, Vitest와 MSW를 사용해 테스트 코드를 작성하여 안정성을 높였습니다.',
                 link: {
                   title: '해당 PRs',
                   href: 'https://github.com/search?q=repo:skkuding/codedang+author:dayongkr+type:pr++state:closed+in:title+authentication&type=pullrequests&s=created&o=desc',
