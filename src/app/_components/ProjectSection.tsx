@@ -18,16 +18,16 @@ export function ProjectSection() {
           link={{ title: '기여 이력', href: 'https://github.com/toss/es-toolkit/commits?author=dayongkr' }}
         />
         <p>
-          es-toolkit은 Lodash의 느린 성능과 무거운 번들 크기를 개선하기 위해 만들어진 자바스크립트 유틸리티
-          라이브러리입니다. 저는 자바스크립트와 타입스크립트를 활용할 기회라고 생각하여 기여를 시작했으며, 2024년 8월
-          기준 커밋 횟수 2위로 꾸준히 기여하고 있습니다.
+          es-toolkit은 Lodash의 느린 성능과 무거운 번들 크기를 개선한 자바스크립트 유틸리티 라이브러리입니다. 저는
+          자바스크립트와 타입스크립트를 활용할 기회라고 생각하여 기여를 시작했으며, 2024년 8월 기준 커밋 횟수 2위로
+          꾸준히 기여하고 있습니다.
         </p>
         <List
           title="주요 기여 내용"
           items={[
             {
               children:
-                '객체를 복제하는 함수가 프로토타입까지 복제하도록 수정했으며, 정수 여부를 확인할 때 네이티브 API를 사용해 함수의 안정성을 높였습니다.',
+                '객체를 복제하는 함수가 프로토타입까지 복제하도록 수정하고, 정수 여부를 확인할 때 빌트인 함수를 사용하도록 개선하여 함수의 안정성을 높였습니다.',
               link: {
                 title: '해당 PRs',
                 href: 'https://github.com/search?q=repo%3Atoss%2Fes-toolkit+type%3Apr++author%3Adayongkr+is%3Amerged+in%3Atitle+++NOT+%22compatibility+%22NOT+%22number+case%22++NOT+%22compat%22+NOT+%22sortBy%22+AND+%22feat%22+OR+%22modernize%22+&type=pullrequests&s=created&o=desc',
@@ -35,7 +35,7 @@ export function ProjectSection() {
             },
             {
               children:
-                '유사한 기능을 가진 orderBy와 sortBy 함수가 별도로 구현되어 있던 것을 하나로 통합하고, 새로운 기능도 추가하여 개발자와 사용자 경험 모두를 개선했습니다.',
+                '유사한 기능을 가진 orderBy와 sortBy 함수가 별도로 구현되어 있던 것을 하나로 통합하고, 새로운 기능도 추가하여 개발자와 사용자 경험을 개선했습니다.',
               link: {
                 title: '해당 PR',
                 href: 'https://github.com/toss/es-toolkit/pull/407',
@@ -43,7 +43,7 @@ export function ProjectSection() {
             },
             {
               children:
-                'Lodash의 테스트 코드를 포팅하고, 구버전 문법으로 구현된 Lodash 함수를 최신 문법과 네이티브 API를 활용해 성능을 개선하면서도 Lodash와 호환되는 함수를 추가했습니다.',
+                'Lodash의 테스트 코드를 포팅하고, 구버전 문법으로 구현된 Lodash 함수를 최신 문법과 빌트인 함수를 활용해 성능을 개선하면서도 Lodash와 호환되는 함수를 추가했습니다.',
               link: {
                 title: '해당 PRs',
                 href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+test+OR+compat+OR+compatibility&type=pullrequests&s=created&o=desc',
@@ -51,7 +51,7 @@ export function ProjectSection() {
             },
             {
               children:
-                'CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 실행 시간 및 비용을 절약했습니다.',
+                'CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 실행 시간 및 비용을 절감했습니다.',
               link: {
                 title: '해당 PRs',
                 href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+ci&type=pullrequests&s=created&o=desc',
@@ -74,15 +74,16 @@ export function ProjectSection() {
             },
           ]}
         />
+        <h4>얻은 것</h4>
         <p>
-          위 기여를 통해 범용성이 높은 Lodash 코드를 분석하면서, 자주 사용되지 않는 케이스로 인해 성능 저하와 코드
-          복잡성이 높아지는 문제를 확인했습니다. 이러한 경험에서 오버 엔지니어링을 경계하고, 사용자 중심의 개발을 통해
-          유용한 기능을 제공하는 것이 중요하다는 것을 배웠습니다.
+          자주 사용되지 않는 케이스로 인해 성능 저하와 코드 복잡성이 높아진 Lodash 코드를 분석하면서, 오버 엔지니어링을
+          경계하고 사용자 중심의 개발을 통해 유용한 기능을 제공하는 것이 중요하다는 것을 배웠습니다. 또한, 명세서를 통해
+          빌트인 함수의 내부 동작을 파악하고, 타입스크립트와 코드 커버리지를 활용해 안정성을 높이는 경험을 했습니다.
         </p>
         <List
           title="사용한 기술"
           items={[
-            { children: '코어: Typescript' },
+            { children: '코어: TypeScript' },
             { children: '패키지 매니저: Yarn Berry' },
             { children: '테스트: Vitest' },
             { children: 'CI/CD: Github Actions, CircleCI' },
@@ -120,7 +121,7 @@ export function ProjectSection() {
               },
               {
                 children:
-                  '사용자 세션을 클라이언트와 서버 구분 없이 가져올 수 있도록 함수를 추상화하고, 클로저를 활용해 클라이언트 측에서 캐싱되도록 구현하여 개발자 경험을 향상하고 서버 부하를 줄였습니다.',
+                  '사용자 세션을 클라이언트와 서버 구분 없이 가져올 수 있도록 함수를 추상화하고, 클라이언트 측에서는 클로저를 활용해 캐싱 되도록 구현하여 개발자 경험을 향상하고 서버 부하를 줄였습니다.',
                 link: {
                   title: '해당 PR',
                   href: 'https://github.com/skkuding/codedang/pull/1973',
@@ -144,27 +145,28 @@ export function ProjectSection() {
               },
               {
                 children:
-                  'Vue.js에서 Next.js로 프레임워크를 전환하는 작업을 주도하며, 폴더 구조를 설계하고 학습하기 쉬운 기술 스택을 선택하여 두 달 안에 전환 작업을 완료했습니다.',
+                  'Vue.js에서 Next.js로 프레임워크를 전환하는 작업을 주도하며, 폴더 구조를 설계하고 학습하기 쉬운 기술 스택을 선택하여 일정에 맞춰 전환 작업을 완료했습니다.',
               },
               {
                 children:
-                  '성급한 개발로 발생한 코드 중복을 줄이고, 통일성 없는 폴더 구조를 개선하기 위해 팀 토론을 주도하며, 응집도 높은 폴더 구조를 가지도록 개선안을 제안했습니다.',
+                  '성급한 개발로 발생한 코드 중복을 줄이고, 통일성이 떨어진 폴더 구조를 개선하기 위해 토론을 주도하여, 동아리 상황에 맞는 폴더 구조에 대한 의견을 수렴하였습니다.',
                 link: {
-                  title: '토론 기록',
+                  title: '개선안 문서',
                   href: 'https://www.notion.so/dayonglee/1-aa05976d60e84cdc87b423337d0b2a0c?pvs=4',
                 },
               },
             ]}
           />
+          <h4>얻은 것</h4>
           <p>
             28명의 동아리 부원과 함께 사용자가 있는 하나의 프로젝트를 1년 반 동안 개발하면서, 배경지식이 다른 팀들과
             소통하는 역량을 키울 수 있었습니다. 다만, 프레임워크 전환 과정에서 마감에 쫓겨 코드 리뷰를 제대로 하지 못한
-            점이 아쉬웠고 코드 리뷰를 통해 팀원 간 의견을 공유하는 것이 중요하다는 것을 배웠습니다.
+            점이 아쉬웠으며, 코드 리뷰를 통해 팀원 간 의견을 공유하는 것이 중요하다는 것을 몸소 깨달았습니다.
           </p>
           <List
             title="사용한 기술"
             items={[
-              { children: '코어: Next.JS, Typescript' },
+              { children: '코어: Next.js, TypeScript' },
               {
                 children: '상태 관리: Zustand',
               },
