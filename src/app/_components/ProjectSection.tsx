@@ -19,15 +19,31 @@ export function ProjectSection() {
         />
         <p>
           es-toolkit은 Lodash의 느린 성능과 무거운 번들 크기를 개선한 자바스크립트 유틸리티 라이브러리입니다. 저는
-          자바스크립트와 타입스크립트를 활용할 기회라고 생각하여 기여를 시작했으며, 2024년 8월 기준 커밋 횟수 2위로
-          꾸준히 기여하고 있습니다.
+          자바스크립트와 타입스크립트를 활용할 기회라고 생각하여 기여를 시작했으며, 남는 시간을 활용해 꾸준히 기여하고
+          있습니다.
         </p>
         <List
-          title="주요 기여 내용"
+          title="주요 활동"
           items={[
             {
               children:
-                '객체를 복제하는 함수가 프로토타입까지 복제하도록 수정하고, 정수 여부를 확인할 때 빌트인 함수를 사용하도록 개선하여 함수의 안정성을 높였습니다.',
+                'Lodash의 테스트 코드를 프로젝트 환경에 맞게 변환하는 스크립트를 작성하는 등 반복적인 작업을 자동화하여 개발 생산성을 높였습니다.',
+              link: {
+                title: '해당 PRs',
+                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+%22script%22+OR+%22automate%22&type=pullrequests&s=created&o=desc',
+              },
+            },
+            {
+              children:
+                'CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 실행 시간 및 비용을 절감했습니다.',
+              link: {
+                title: '해당 PRs',
+                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+ci&type=pullrequests&s=created&o=desc',
+              },
+            },
+            {
+              children:
+                '객체를 복제하는 함수가 프로토타입까지 복제하도록 수정하는 등 자바스크립트에 대한 이해를 바탕으로 기존 함수를 개선했습니다.',
               link: {
                 title: '해당 PRs',
                 href: 'https://github.com/search?q=repo%3Atoss%2Fes-toolkit+type%3Apr++author%3Adayongkr+is%3Amerged+in%3Atitle+++NOT+%22compatibility+%22NOT+%22number+case%22++NOT+%22compat%22+NOT+%22sortBy%22+AND+%22feat%22+OR+%22modernize%22+&type=pullrequests&s=created&o=desc',
@@ -42,35 +58,19 @@ export function ProjectSection() {
               },
             },
             {
-              children:
-                'Lodash의 테스트 코드를 포팅하고, 구버전 문법으로 구현된 Lodash 함수를 최신 문법과 빌트인 함수를 활용해 성능을 개선하면서도 Lodash와 호환되는 함수를 추가했습니다.',
+              children: '최신 문법과 빌트인 함수를 활용해 성능을 개선하면서도 Lodash와 호환되는 함수를 구현했습니다.',
               link: {
                 title: '해당 PRs',
-                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+test+OR+compat+OR+compatibility&type=pullrequests&s=created&o=desc',
+                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+test+OR+compat+OR+compatibility+NOT+script&type=pullrequests&s=created&o=desc',
               },
             },
             {
               children:
-                'CI 과정에서 변경된 파일만 린트 작업을 수행하도록 설정하여, CI 실행 시간 및 비용을 절감했습니다.',
+                '구현 우선순위를 정하기 위해, 데이터를 수집하는 도구와 이를 시각화해주는 사이트를 개발하여 운영에도 도움을 주었습니다.',
               link: {
-                title: '해당 PRs',
-                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+ci&type=pullrequests&s=created&o=desc',
+                title: '해당 사이트',
+                href: 'https://dependents-tracker.vercel.app/',
               },
-            },
-            {
-              children:
-                '깃허브 검색 서비스와 노션 차트를 활용해 어떤 함수가 많이 사용되는지 분석 및 시각화하고, 이를 메인테이너 분에게 공유하여 개발 외적으로도 도움이 되도록 했습니다.',
-              link: {
-                title: '해당 노션 페이지',
-                href: 'https://dayonglee.notion.site/es-toolkit-11f89d50abe84fc89811498cdfae63ab',
-              },
-              sub: [
-                {
-                  children:
-                    '이 작업이 사용자 중심 개발과 동기부여에 도움이 된다고 판단하여, 데이터 수집을 자동화하고 웹으로 시각화하는 작업을 진행 중입니다.',
-                  link: { title: '해당 리포지토리', href: 'https://github.com/dayongkr/dependents-tracker' },
-                },
-              ],
             },
           ]}
         />
@@ -88,6 +88,7 @@ export function ProjectSection() {
             { children: '패키지 매니저: Yarn Berry' },
             { children: '테스트: Vitest' },
             { children: 'CI/CD: Github Actions, CircleCI' },
+            { children: '코드 변환: Jscodeshift' },
           ]}
         />
       </SubSection>
@@ -110,7 +111,7 @@ export function ProjectSection() {
             진행했으며, 학교와 사용자의 피드백을 받아 서비스를 지속적으로 개선하고 있습니다.
           </p>
           <List
-            title="주요 기여 내용"
+            title="주요 활동"
             items={[
               {
                 children:
