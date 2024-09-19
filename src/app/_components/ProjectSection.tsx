@@ -11,7 +11,7 @@ export function ProjectSection() {
   return (
     <MainSection title="프로젝트">
       <SubSection
-        title={{ text: '오픈 소스 기여', sub: { text: 'toss/es-toolkit', href: 'https://github.com/toss/es-toolkit' } }}
+        title={{ text: '오픈 소스 기여', sub: { text: 'es-toolkit', href: 'https://github.com/toss/es-toolkit' } }}
       >
         <SubDescription
           date={{ from: { year: 24, month: 7 }, to: 'current' }}
