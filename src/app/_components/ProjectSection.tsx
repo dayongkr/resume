@@ -66,7 +66,7 @@ export function ProjectSection() {
             },
             {
               children:
-                '구현 우선순위를 정하기 위해, 데이터를 수집하는 도구와 이를 시각화해주는 사이트를 개발하여 운영에도 도움을 주었습니다.',
+                '구현 우선순위를 정하기 위해 패키지 사용 정보를 수집하는 도구와 이를 시각화하는 사이트를 개발했습니다.',
               link: {
                 title: '해당 사이트',
                 href: 'https://dependents-tracker.vercel.app/',
