@@ -2,7 +2,7 @@ import { Link } from '../types/props';
 import { LinkBlank } from './LinkBlank';
 import { Fragment } from 'react';
 
-type ListItem = { children: React.ReactNode; link?: Link; sub?: ListItem[] };
+type ListItem = { children: React.ReactNode; link?: Link; sub?: ListItem[] } | null;
 
 export function List({
   items,
@@ -15,13 +15,13 @@ export function List({
     <>
       {title && <h4>{title}</h4>}
       <ul>
-        {items.map((item, index) => (
-          <Fragment key={index}>
-            <ListItem link={item.link} sub={item?.sub}>
+        {items.map((item, index) =>
+          item ? (
+            <ListItem link={item.link} sub={item?.sub} key={index}>
               {item.children}
             </ListItem>
-          </Fragment>
-        ))}
+          ) : null
+        )}
       </ul>
     </>
   );
