@@ -64,6 +64,9 @@ export function SkillSection() {
             {
               children: 'Node.js의 fs 모듈 등을 활용해 스크래핑을 자동화하고 데이터를 가공한 경험이 있습니다.',
             },
+            {
+              children: 'AST에 대한 이해를 바탕으로 jscodeshift를 사용하여 코드 변환 스크립트를 작성할 수 있습니다.',
+            },
           ]}
         />
       </SubSection>
