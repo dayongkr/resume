@@ -14,10 +14,10 @@ export default function Home() {
       <PrintBanner />
       <BioSection />
       <ProjectSection />
-      <ActivitySection />
-      <EducationSection />
-      <AwardSection />
       <SkillSection />
+      <EducationSection />
+      <ActivitySection />
+      <AwardSection />
       <CertificationSection />
       <ContactSection />
     </main>

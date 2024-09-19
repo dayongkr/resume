@@ -13,7 +13,8 @@ export function SkillSection() {
                 '주로 React 기반의 프레임워크인 Next.js를 사용하며, 필요에 따라 Next.js의 소스 코드를 분석하여 내부 동작을 이해합니다.',
             },
             {
-              children: 'React Server Component, Suspense, Error Boundary 등을 활용하여 선언적으로 코드를 작성합니다.',
+              children:
+                'React Server Component, Suspense, Error Boundary 등을 활용하여 읽기 좋은 코드를 작성하고자 노력합니다.',
             },
             {
               children: '전역 상태 관리 라이브러리에 종속되지 않고, 상황에 따라 URL 파라미터와 클로저를 활용합니다.',
@@ -39,14 +40,16 @@ export function SkillSection() {
               children: '레거시 코드를 최신 문법으로 리팩토링하고 성능을 개선한 경험이 있습니다.',
             },
             {
-              children:
-                'Vitest와 MSW를 사용하여 테스트 코드를 작성하고, 타입스크립트로 예측할 수 있는 함수를 작성합니다.',
+              children: 'Vitest와 MSW를 사용하여 테스트 코드를 작성하고, 목적에 맞게 타입을 정의할 수 있습니다.',
             },
             {
               children: 'Node.js의 모듈 시스템인 CJS와 ESM, 그리고 의존성에 대해 기본적인 이해가 있습니다.',
             },
             {
-              children: 'Rollup을 사용하여 패키지를 개발한 기본적인 경험이 있습니다.',
+              children: 'Rollup을 사용하여 패키지를 번들링하고, 배포한 기본적인 경험이 있습니다.',
+            },
+            {
+              children: 'Lookahead, Capture Group, Unicode Property Escape 등의 정규 표현식을 사용할 수 있습니다.',
             },
           ]}
         />
