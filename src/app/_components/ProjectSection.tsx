@@ -18,13 +18,22 @@ export function ProjectSection() {
           link={{ title: '기여 이력', href: 'https://github.com/toss/es-toolkit/commits?author=dayongkr' }}
         />
         <p>
-          es-toolkit은 Lodash의 느린 성능과 무거운 번들 크기를 개선한 자바스크립트 유틸리티 라이브러리입니다. 저는
-          자바스크립트와 타입스크립트를 활용할 기회라고 생각하여 기여를 시작했으며, 남는 시간을 활용해 꾸준히 기여하고
-          있습니다.
+          es-toolkit은 Lodash의 느린 성능과 무거운 번들 크기를 개선한 자바스크립트 유틸리티 라이브러리입니다. 저는 많은
+          사용자에게 도움을 줄 수 있는 프로젝트에 참여하고 싶었고, 기술적으로 타입스크립트를 보다 더 활용할 기회라고
+          생각해 기여를 시작했습니다. 꾸준히 다양한 부분에 기여했으며, 특히 생산성을 위한 자동화와 유틸리티 함수 구현에
+          집중했습니다.
         </p>
         <List
           title="주요 활동"
           items={[
+            {
+              children:
+                'for…of 반복문을 배열 대상으로 사용하는 것을 금지하는 ESLint 플러그인을 제작하여 함수의 성능과 코드 일관성을 높였습니다.',
+              link: {
+                title: '해당 PR',
+                href: 'https://github.com/toss/es-toolkit/pull/587',
+              },
+            },
             {
               children:
                 'Lodash의 테스트 코드를 프로젝트 환경에 맞게 변환하는 스크립트를 작성하는 등 반복적인 작업을 자동화하여 개발 생산성을 높였습니다.',
@@ -42,22 +51,6 @@ export function ProjectSection() {
               },
             },
             {
-              children:
-                '객체를 복제하는 함수가 프로토타입까지 복제하도록 수정하는 등 자바스크립트에 대한 이해를 바탕으로 기존 함수를 개선했습니다.',
-              link: {
-                title: '해당 PRs',
-                href: 'https://github.com/search?q=repo%3Atoss%2Fes-toolkit+type%3Apr++author%3Adayongkr+is%3Amerged+in%3Atitle+++NOT+%22compatibility+%22NOT+%22number+case%22++NOT+%22compat%22+NOT+%22sortBy%22+AND+%22feat%22+OR+%22modernize%22+&type=pullrequests&s=created&o=desc',
-              },
-            },
-            {
-              children:
-                '유사한 기능을 가진 orderBy와 sortBy 함수가 별도로 구현되어 있던 것을 하나로 통합하고, 새로운 기능도 추가하여 개발자와 사용자 경험을 개선했습니다.',
-              link: {
-                title: '해당 PR',
-                href: 'https://github.com/toss/es-toolkit/pull/407',
-              },
-            },
-            {
               children: '최신 문법과 빌트인 함수를 활용해 성능을 개선하면서도 Lodash와 호환되는 함수를 구현했습니다.',
               link: {
                 title: '해당 PRs',
@@ -66,10 +59,10 @@ export function ProjectSection() {
             },
             {
               children:
-                '구현 우선순위를 정하기 위해 패키지 사용 정보를 수집하는 도구와 이를 시각화하는 사이트를 개발했습니다.',
+                '한 번 배포하면 함수 인터페이스를 변경하기 어려운 상황에서, 새로운 함수의 인터페이스를 설계하는 경험을 했습니다.',
               link: {
-                title: '해당 사이트',
-                href: 'https://dependents-tracker.vercel.app/',
+                title: '해당 PRs',
+                href: 'https://github.com/search?q=repo:toss/es-toolkit+type:pr++author:dayongkr+is:merged+in:title+++%22sortBy%22+NOT+%22compat%22&type=pullrequests&s=created&o=desc',
               },
             },
           ]}
