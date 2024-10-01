@@ -28,7 +28,7 @@ export function ProjectSection() {
           items={[
             {
               children:
-                'for…of 반복문을 배열 대상으로 사용하는 것을 금지하는 ESLint 플러그인을 제작하여 함수의 성능과 코드 일관성을 높였습니다.',
+                'for…of 반복문을 배열 대상으로 사용하는 것을 금지하는 ESLint 플러그인 패키지를 개발하여 함수의 성능과 코드 일관성을 높였습니다.',
               link: {
                 title: '해당 PR',
                 href: 'https://github.com/toss/es-toolkit/pull/587',
@@ -78,10 +78,10 @@ export function ProjectSection() {
           title="사용한 기술"
           items={[
             { children: '코어: TypeScript' },
-            { children: '패키지 매니저: Yarn Berry' },
-            { children: '테스트: Vitest' },
-            { children: 'CI/CD: Github Actions, CircleCI' },
             { children: '코드 변환: Jscodeshift' },
+            { children: 'CI/CD: Github Actions, CircleCI' },
+            { children: '테스트: Vitest' },
+            { children: '패키지 매니저: Yarn Berry' },
           ]}
         />
       </SubSection>
@@ -112,7 +112,7 @@ export function ProjectSection() {
               },
               {
                 children:
-                  '사용자 세션을 클라이언트와 서버 구분 없이 가져올 수 있도록 함수를 추상화하고, 클라이언트 측에서는 클로저를 활용해 캐싱 되도록 구현하여 개발자 경험을 향상하고 서버 부하를 줄였습니다.',
+                  '사용자 세션을 클라이언트와 서버 구분 없이 가져올 수 있도록 함수를 추상화하여 개발자 경험을 향상하고, 클라이언트 측에서는 클로저를 활용해 캐싱을 구현하여 서버 부하를 줄였습니다.',
                 link: {
                   title: '해당 PR',
                   href: 'https://github.com/skkuding/codedang/pull/1973',
@@ -120,7 +120,7 @@ export function ProjectSection() {
               },
               {
                 children:
-                  '이미지 부분을 최소화한 캐러셀 컴포넌트를 개발하고, 이미지 최적화 기능의 동작 원리를 파악하기 위해 Next.js의 소스 코드를 분석한 후 관련 정보를 공유하여 로딩 속도를 개선했습니다.',
+                  '이미지 사용을 최소화한 캐러셀 컴포넌트를 개발하고, Next.js의 이미지 최적화 관련 소스 코드를 분석하여 그 내용을 공유하는 등 로딩 속도 개선에 기여했습니다.',
                 link: {
                   title: '정리한 글',
                   href: 'https://velog.io/@dayongkr/Next.JS%EC%9D%98-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0-%EB%B6%80%EC%A0%9C.-AVIF-%EB%A7%8C%EB%8A%A5%EC%9D%80-%EC%95%84%EB%8B%88%EB%8B%A4',
@@ -140,7 +140,7 @@ export function ProjectSection() {
                   '통일성이 떨어진 프로젝트 구조를 개선하기 위해 토론을 주도하여, 동아리 상황에 맞는 프로젝트 구조에 대한 의견을 수렴하였습니다.',
                 link: {
                   title: '개선안 문서',
-                  href: 'https://www.notion.so/dayonglee/1-aa05976d60e84cdc87b423337d0b2a0c?pvs=4',
+                  href: 'https://dayonglee.notion.site/1-aa05976d60e84cdc87b423337d0b2a0c?pvs=4',
                 },
               },
             ]}
@@ -159,9 +159,9 @@ export function ProjectSection() {
                 children: '상태 관리: Zustand',
               },
               { children: '스타일링: TailwindCSS' },
-              { children: '패키지 매니저: PNPM' },
-              { children: '테스트: Vitest, MSW' },
               { children: 'CI/CD: Github Actions' },
+              { children: '테스트: Vitest, MSW' },
+              { children: '패키지 매니저: PNPM' },
             ]}
           />
         </div>
