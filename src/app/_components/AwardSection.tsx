@@ -1,13 +1,21 @@
 import { List } from '@/components/List';
 import { MainSection } from '@/components/MainSection';
-import { SubDescription } from '@/components/SubDescription';
 import { SubSection } from '@/components/SubSection';
 
 export function AwardSection() {
   return (
     <MainSection title="수상">
-      <SubSection title={{ text: 'Elice AI Edu 해커톤', sub: { text: '우수상' } }}>
-        <SubDescription date={{ from: { year: 2023, month: 8 } }} />
+      <SubSection
+        title={{
+          title: 'Elice AI Edu 해커톤',
+          link: { text: '우수상' },
+          sub: {
+            date: {
+              from: { year: 2023, month: 8 },
+            },
+          },
+        }}
+      >
         <List
           items={[
             {
@@ -24,8 +32,13 @@ export function AwardSection() {
           ]}
         />
       </SubSection>
-      <SubSection title={{ text: 'SW 중심대학 공동 해커톤', sub: { text: '우수상' } }}>
-        <SubDescription date={{ from: { year: 2023, month: 6 } }} />
+      <SubSection
+        title={{
+          title: 'SW 중심대학 공동 해커톤',
+          link: { text: '우수상' },
+          sub: { date: { from: { year: 2023, month: 6 } } },
+        }}
+      >
         <List
           items={[
             {

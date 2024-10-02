@@ -1,21 +1,30 @@
 import { List } from '@/components/List';
 import { MainSection } from '@/components/MainSection';
-import { SubDescription } from '@/components/SubDescription';
 import { SubSection } from '@/components/SubSection';
 
 export function EducationSection() {
   return (
     <MainSection title="교육">
-      <SubSection title={{ text: '성균관대학교 소프트웨어학과', sub: { text: '4.09 / 4.5' } }}>
-        <SubDescription date={{ from: { year: 2023, month: 3 }, to: { year: 2025, month: 2 } }} />
+      <SubSection
+        title={{
+          title: '성균관대학교 소프트웨어학과',
+          link: { text: '4.09 / 4.5' },
+          sub: {
+            date: {
+              from: { year: 2023, month: 3 },
+              to: { year: 2025, month: 2 },
+            },
+          },
+        }}
+      >
         <List
           items={[
             {
               children:
-                'CS 지식에 대한 열망과 대학 진학을 제대로 준비해보지 못한 아쉬움으로, 전역 후 약 6개월간 독학하여 편입하였습니다.',
+                'CS 지식에 대한 열망과 대학 진학을 제대로 준비해 보지 못한 아쉬움으로, 전역 후 약 6개월간 독학하여 편입하였습니다.',
             },
             {
-              children: '첫 학기에 개발 동아리에 참여하고 성적 우수상을 받는 등 새로운 환경에 빠르게 적응했습니다.',
+              children: '첫 학기에 개발 동아리 활동 그리고 성적 우수상을 받는 등 새로운 환경에 빠르게 적응했습니다.',
             },
             {
               children:
@@ -24,8 +33,18 @@ export function EducationSection() {
           ]}
         />
       </SubSection>
-      <SubSection title={{ text: '경민대학교 융합소프트웨어과', sub: { text: '4.5 / 4.5' } }}>
-        <SubDescription date={{ from: { year: 2020, month: 3 }, to: { year: 2021, month: 2 } }} />
+      <SubSection
+        title={{
+          title: '경민대학교 융합소프트웨어과',
+          link: { text: '4.5 / 4.5' },
+          sub: {
+            date: {
+              from: { year: 2020, month: 3 },
+              to: { year: 2021, month: 2 },
+            },
+          },
+        }}
+      >
         <List
           items={[
             {

@@ -1,13 +1,11 @@
 import { List } from '@/components/List';
 import { MainSection } from '@/components/MainSection';
-import { SubDescription } from '@/components/SubDescription';
 import { SubSection } from '@/components/SubSection';
 
 export function ActivitySection() {
   return (
     <MainSection title="활동">
-      <SubSection title={{ text: '기술 글 작성' }}>
-        <SubDescription date={{ from: { year: 2024, month: 7 }, to: 'current' }} />
+      <SubSection title={{ title: '기술 글 작성', sub: { date: { from: { year: 2024, month: 7 }, to: 'current' } } }}>
         <List
           items={[
             {
@@ -28,8 +26,12 @@ export function ActivitySection() {
           ]}
         />
       </SubSection>
-      <SubSection title={{ text: '삼성전자 DX 대학생 알고리즘 역량 강화 특강 수료' }}>
-        <SubDescription date={{ from: { year: 2024, month: 1 }, to: { year: 2024, month: 2 } }} />
+      <SubSection
+        title={{
+          title: '삼성전자 DX 대학생 알고리즘 역량 강화 특강 수료',
+          sub: { date: { from: { year: 2024, month: 1 }, to: { year: 2024, month: 2 } } },
+        }}
+      >
         <List
           items={[
             {
@@ -42,8 +44,13 @@ export function ActivitySection() {
           ]}
         />
       </SubSection>
-      <SubSection title={{ text: '교내 개발 동아리', sub: { text: '스꾸딩' } }}>
-        <SubDescription date={{ from: { year: 2023, month: 3 }, to: 'current' }} />
+      <SubSection
+        title={{
+          title: '교내 개발 동아리',
+          link: { text: '스꾸딩' },
+          sub: { date: { from: { year: 2023, month: 3 }, to: 'current' } },
+        }}
+      >
         <List
           items={[
             {

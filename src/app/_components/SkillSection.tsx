@@ -5,7 +5,7 @@ import { SubSection } from '@/components/SubSection';
 export function SkillSection() {
   return (
     <MainSection title="역량">
-      <SubSection title={{ text: '프론트엔드' }}>
+      <SubSection title={{ title: '프론트엔드' }}>
         <List
           items={[
             {
@@ -30,7 +30,7 @@ export function SkillSection() {
           ]}
         />
       </SubSection>
-      <SubSection title={{ text: '자바스크립트' }}>
+      <SubSection title={{ title: '자바스크립트' }}>
         <List
           items={[
             {
@@ -46,26 +46,28 @@ export function SkillSection() {
               children: 'Node.js의 모듈 시스템인 CJS와 ESM, 그리고 의존성에 대해 기본적인 이해가 있습니다.',
             },
             {
-              children: 'Rollup을 사용하여 패키지를 번들링하고, 배포한 기본적인 경험이 있습니다.',
+              children: 'Rollup을 사용하여 패키지를 번들링하고, 배포해 본 경험이 있습니다.',
             },
             {
-              children: 'Lookahead, Capture Group, Unicode Property Escape 등의 정규 표현식을 사용할 수 있습니다.',
+              children:
+                'Lookahead, Capture Group, Unicode Property Escape 등을 활용하여 정규 표현식을 작성할 수 있습니다.',
             },
           ]}
         />
       </SubSection>
-      <SubSection title={{ text: '자동화' }}>
+      <SubSection title={{ title: '자동화' }}>
         <List
           items={[
+            {
+              children:
+                'AST에 대한 이해를 바탕으로 jscodeshift를 사용하여 코드 변환 스크립트를 작성하고 ESLint 플러그인을 개발한 경험이 있습니다.',
+            },
             {
               children: 'git diff와 xargs와 같은 명령어를 사용하여 변경된 파일만 작업하도록 최적화한 경험이 있습니다.',
             },
             { children: 'GitHub Actions와 CircleCI를 사용하여 CI/CD를 구축하고 개선한 경험이 있습니다.' },
             {
               children: 'Node.js의 fs 모듈 등을 활용해 스크래핑을 자동화하고 데이터를 가공한 경험이 있습니다.',
-            },
-            {
-              children: 'AST에 대한 이해를 바탕으로 jscodeshift를 사용하여 코드 변환 스크립트를 작성할 수 있습니다.',
             },
           ]}
         />

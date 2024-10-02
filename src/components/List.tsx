@@ -1,8 +1,7 @@
 import { Link } from '../types/props';
 import { LinkBlank } from './LinkBlank';
-import { Fragment } from 'react';
 
-type ListItem = { children: React.ReactNode; link?: Link; sub?: ListItem[] } | null;
+export type ListItem = { children: React.ReactNode; link?: Link; sub?: ListItem[] } | null;
 
 export function List({
   items,
