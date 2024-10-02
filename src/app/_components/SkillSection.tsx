@@ -60,7 +60,7 @@ export function SkillSection() {
           items={[
             {
               children:
-                'AST에 대한 이해를 바탕으로 jscodeshift를 사용하여 코드 변환 스크립트를 작성하고 ESLint 플러그인을 개발한 경험이 있습니다.',
+                'AST에 대한 이해를 바탕으로 jscodeshift를 사용하여 코드 변환 스크립트를 작성하고, ESLint 플러그인을 개발한 경험이 있습니다.',
             },
             {
               children: 'git diff와 xargs와 같은 명령어를 사용하여 변경된 파일만 작업하도록 최적화한 경험이 있습니다.',
