@@ -21,7 +21,7 @@ export function ContactSection() {
               children: <LinkBlank href="https://github.com/dayongkr">깃허브</LinkBlank>,
             },
             {
-              children: <LinkBlank href="https://www.linkedin.com/in/dayong-lee-240b53266">링크드인</LinkBlank>,
+              children: <LinkBlank href="https://www.linkedin.com/in/dayongkr">링크드인</LinkBlank>,
             },
           ]}
         />
