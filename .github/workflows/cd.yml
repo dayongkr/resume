@@ -53,6 +53,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Add .nojekyll
+        run: touch out/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -61,7 +64,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://dayongkr.github.io/resume/
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
